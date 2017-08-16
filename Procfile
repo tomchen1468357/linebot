@@ -1,1 +1,1 @@
-web: gunicorn echo123:app
+web gunicorn echo123:app
