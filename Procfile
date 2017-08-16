@@ -1,1 +1,1 @@
-web gunicorn app_run:echo.py
+web gunicorn app_run:echo
