@@ -141,32 +141,32 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     if event.message.text != "奇摩子電影" or "台銀即時匯率" or "lativ打幾折" or "my protein打幾折":
-    buttons_template = TemplateSendMessage(
-        alt_text='目錄 template',
-        template=ButtonsTemplate(
-            title='選擇服務',
-            text='請選擇',
-            thumbnail_image_url='http://i.imgur.com/IHFI8zN.png',
-            actions=[
-                MessageTemplateAction(
-                    label='台銀即時匯率',
-                    text='台銀即時匯率'
-                ),
-                URITemplateAction(
-                    label='lativ打幾折',
-                    text='lativ打幾折'
-                ),
-                URITemplateAction(
-                    label='my protein打幾折',
-                    text='my protein打幾折'
-                ),
-                URITemplateAction(
-                    label='奇摩子電影',
-                    text='奇摩子電影'
-                )
-            ]
+        buttons_template = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ButtonsTemplate(
+                title='選擇服務',
+                text='請選擇',
+                thumbnail_image_url='http://i.imgur.com/IHFI8zN.png',
+                actions=[
+                    MessageTemplateAction(
+                        label='台銀即時匯率',
+                        text='台銀即時匯率'
+                    ),
+                    URITemplateAction(
+                        label='lativ打幾折',
+                        text='lativ打幾折'
+                    ),
+                    URITemplateAction(
+                        label='my protein打幾折',
+                        text='my protein打幾折'
+                    ),
+                    URITemplateAction(
+                        label='奇摩子電影',
+                        text='奇摩子電影'
+                    )
+                ]
+            )
         )
-    )
         return 0
     line_bot_api.reply_message(event.reply_token, buttons_template)
 
