@@ -287,7 +287,7 @@ def panx():
         content += '{}\n{}\n\n'.format(title, link)
     return content
 '''
-def money_J_U():
+def get_web_page(url):
     resp = requests.get(
         url=url,
         cookies={'over18': '1'}
@@ -298,6 +298,9 @@ def money_J_U():
     else:
         #        return resp.text
         return resp.text
+
+
+def money_J_U():
     allcash = []
     product = []
     dodo1 = []
