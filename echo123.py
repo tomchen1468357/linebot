@@ -40,7 +40,7 @@ def callback():
 
     return 200
 
-
+'''
 def pattern_mega(text):
     patterns = [
         'mega', 'mg', 'mu', 'ＭＥＧＡ', 'ＭＥ', 'ＭＵ',
@@ -285,7 +285,7 @@ def panx():
         link = data['href']
         content += '{}\n{}\n\n'.format(title, link)
     return content
-
+'''
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -491,20 +491,20 @@ def handle_message(event):
             thumbnail_image_url='https://i.imgur.com/kzi5kKy.jpg',
             actions=[
                 MessageTemplateAction(
-                    label='開始玩',
-                    text='開始玩'
+                    label='台銀即時匯率',
+                    text='台銀即時匯率'
                 ),
                 URITemplateAction(
-                    label='影片介紹 阿肥bot',
-                    uri='https://youtu.be/1IxtWgWxtlE'
+                    label='Lativ特價查詢',
+                    text='Lativ特價查詢'
                 ),
                 URITemplateAction(
-                    label='如何建立自己的 Line Bot',
-                    uri='https://github.com/twtrubiks/line-bot-tutorial'
+                    label='My Protein特價查詢',
+                    text='My Protein特價查詢'
                 ),
                 URITemplateAction(
-                    label='聯絡作者',
-                    uri='https://www.facebook.com/TWTRubiks?ref=bookmarks'
+                    label='奇摩子電影',
+                    text='奇摩子電影'
                 )
             ]
         )
