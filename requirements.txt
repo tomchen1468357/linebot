@@ -11,4 +11,3 @@ psycopg2==2.6.2
 line-bot-sdk
 beautifulsoup4
 imgurpython
-time
