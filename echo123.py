@@ -140,7 +140,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-    
+    if event.message.text != "奇摩子電影":
     buttons_template = TemplateSendMessage(
         alt_text='目錄 template',
         template=ButtonsTemplate(
@@ -167,6 +167,7 @@ def handle_message(event):
             ]
         )
     )
+        return 0
     line_bot_api.reply_message(event.reply_token, buttons_template)
 
 
