@@ -370,20 +370,20 @@ def handle_message(event):
                 thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='新聞',
-                        text='新聞'
+                        label='台銀即時匯率',
+                        text='台銀即時匯率'
                     ),
                     MessageTemplateAction(
-                        label='電影',
-                        text='電影'
+                        label='Lativ特價查詢',
+                        text='Lativ特價查詢'
                     ),
                     MessageTemplateAction(
-                        label='看廢文',
-                        text='看廢文'
+                        label='My Protein打幾折',
+                        text='My Protein打幾折'
                     ),
                     MessageTemplateAction(
-                        label='正妹',
-                        text='正妹'
+                        label='奇摩子電影',
+                        text='奇摩子電影'
                     )
                 ]
             )
@@ -488,7 +488,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            thumbnail_image_url='https://i.imgur.com/kzi5kKy.jpg',
+            thumbnail_image_url='http://i.imgur.com/O3jMvd4.png',
             actions=[
                 MessageTemplateAction(
                     label='開始玩',
