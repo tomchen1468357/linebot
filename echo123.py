@@ -12,9 +12,7 @@ from linebot import (
 from linebot.exceptions import (
     InvalidSignatureError
 )
-from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
-)
+from linebot.models import *
 
 app = Flask(__name__) # 傳入__name__初始化一個Flask實例
 line_bot_api = LineBotApi('BEg+pXLIm6G6YKCFSNN7LEtG0KjAeQPzEvpJQ+2uGl6iaQ0H5WphX6ELhZUdTWG3uyL0o9MWUac5gHVuPfCJUVNLVy7PK09bTuCmkpUuqYzKk1YzjYOtX3tQYdzzJtfEYvJu7nn+EFQzuOtFyO/ZQQdB04t89/1O/w1cDnyilFU=')
@@ -41,7 +39,7 @@ def callback():
     except InvalidSignatureError:
         abort(400)
 
-    return 'ok'
+    return 200
 
 def get_web_page(url):
     resp = requests.get(
@@ -110,9 +108,6 @@ def money_J_U():
     JPYANDUSD = '{}\n{}'.format(USD_NOW, JPY_NOW)
     return JPYANDUSD
 
-
-print()
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
@@ -148,7 +143,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            thumbnail_image_url='http://i.imgur.com/IHFI8zN.png',
+            thumbnail_image_url='https://i.imgur.com/kzi5kKy.jpg',
             actions=[
                 MessageTemplateAction(
                     label='台銀即時匯率',
