@@ -488,7 +488,7 @@ def handle_message(event):
         template=ButtonsTemplate(
             title='選擇服務',
             text='請選擇',
-            thumbnail_image_url='http://i.imgur.com/O3jMvd4.jpg',
+            thumbnail_image_url='http://i.imgur.com/w3qEWiH.png',
             actions=[
                 MessageTemplateAction(
                     label='開始玩',
