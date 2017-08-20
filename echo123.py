@@ -40,7 +40,7 @@ def callback():
 
     return 200
 
-'''
+
 def pattern_mega(text):
     patterns = [
         'mega', 'mg', 'mu', 'ＭＥＧＡ', 'ＭＥ', 'ＭＵ',
@@ -285,7 +285,7 @@ def panx():
         link = data['href']
         content += '{}\n{}\n\n'.format(title, link)
     return content
-'''
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
