@@ -365,9 +365,9 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
             alt_text='開始玩 template',
             template=ButtonsTemplate(
-                title='選擇服務',
+                title='最值得信賴的自動化服務',
                 text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
+                thumbnail_image_url='https://i.imgur.com/s9egXSo.jpg',
                 actions=[
                     MessageTemplateAction(
                         label='台銀即時匯率',
@@ -486,7 +486,7 @@ def handle_message(event):
     buttons_template = TemplateSendMessage(
         alt_text='目錄 template',
         template=ButtonsTemplate(
-            title='選擇服務',
+            title='歡迎進入查詢頁面:)',
             text='請選擇',
             thumbnail_image_url='https://i.imgur.com/w3qEWiH.png',
             actions=[
