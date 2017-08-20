@@ -140,7 +140,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-    if event.message.text != "奇摩子電影":
+    if event.message.text != "奇摩子電影" or "台銀即時匯率" or "lativ打幾折" or "my protein打幾折":
     buttons_template = TemplateSendMessage(
         alt_text='目錄 template',
         template=ButtonsTemplate(
