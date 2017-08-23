@@ -390,10 +390,10 @@ def Myprotein():
  
 # message_b = [message_b.text for message_b in message]         # Another way to exclude undesirable symbols
  
-for i in range(len(message)): 
-    D1 = "優惠:{} {} \n{:-^99}\n".format(message[i].text, code[i].text, "")
-    D2.append(D1)
-    D3 = "".join(D2)                                            # Assume the length of nessage[] and code[] are the same
+    for i in range(len(message)): 
+        D1 = "優惠:{} {} \n{:-^99}\n".format(message[i].text, code[i].text, "")
+        D2.append(D1)
+        D3 = "".join(D2)                                            # Assume the length of nessage[] and code[] are the same
                                                         # Use join() to lump the formerly appended elements as one variable  
     return D3 
  
