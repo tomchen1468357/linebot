@@ -370,13 +370,13 @@ def get_web_page(url):
         return resp.text
  
 def Myprotein():
-D2 = []
-page = get_web_page("https://www.myprotein.tw/voucher-codes.list") 
+    D2 = []
+    page = get_web_page("https://www.myprotein.tw/voucher-codes.list") 
  
-data_parse = BeautifulSoup(page, "html.parser") 
+    data_parse = BeautifulSoup(page, "html.parser") 
  
-message = data_parse.find_all("p", "voucher-message") 
-code = data_parse.find_all("div", "voucher_codeItem") 
+    message = data_parse.find_all("p", "voucher-message") 
+    code = data_parse.find_all("div", "voucher_codeItem") 
  
 # D1 = "優惠一:{0} \n {1}".format(message[0].text, code[0].text)
 # D2 = "優惠二:{0} \n {1}".format(message[1].text, code[1].text)
@@ -393,7 +393,7 @@ code = data_parse.find_all("div", "voucher_codeItem")
 for i in range(len(message)): 
     D1 = "優惠:{} {} \n{:-^99}\n".format(message[i].text, code[i].text, "")
     D2.append(D1)
-    D3="".join(D2)                                            # Assume the length of nessage[] and code[] are the same
+    D3 = "".join(D2)                                            # Assume the length of nessage[] and code[] are the same
                                                         # Use join() to lump the formerly appended elements as one variable  
 return D3 
  
