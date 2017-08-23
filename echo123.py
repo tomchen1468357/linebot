@@ -358,16 +358,16 @@ def money_J_U():
 
 #print(money_J_U())
 def get_web_page(url):
-   resp = requests.get(
-       url=url,
+    resp = requests.get(
+        url=url,
  
-   )
-   if resp.status_code != 200:
-       print('Invalid url:', resp.url)
-       return None
-   else:
-       #        return resp.text
-       return resp.text
+    )
+    if resp.status_code != 200:
+        print('Invalid url:', resp.url)
+        return None
+    else:
+        #        return resp.text
+        return resp.text
  
 def Myprotein():
 D2= []
