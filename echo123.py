@@ -357,6 +357,47 @@ def money_J_U():
 
 
 #print(money_J_U())
+def get_web_page(url):
+   resp = requests.get(
+       url=url,
+ 
+   )
+   if resp.status_code != 200:
+       print('Invalid url:', resp.url)
+       return None
+   else:
+       #        return resp.text
+       return resp.text
+ 
+def Myprotein():
+D2= []
+page = get_web_page("https://www.myprotein.tw/voucher-codes.list") 
+ 
+data_parse = BeautifulSoup(page, "html.parser") 
+ 
+message = data_parse.find_all("p", "voucher-message") 
+code = data_parse.find_all("div", "voucher_codeItem") 
+ 
+# D1 = "優惠一:{0} \n {1}".format(message[0].text, code[0].text)
+# D2 = "優惠二:{0} \n {1}".format(message[1].text, code[1].text)
+# myprotein = "{0} \n {1}".format(D1, D2)
+# print(myprotein)                                          # Length of the list is a variable
+ 
+# for i in range(len(message)):
+#   for j in range(len(code)):
+#    Discount = "{} \n {}".format(message[i].text, code[j].text)
+#    print(Discount)                                       # Nested for loop, information repeated
+ 
+# message_b = [message_b.text for message_b in message]         # Another way to exclude undesirable symbols
+ 
+for i in range(len(message)): 
+    D1 = "優惠:{} {} \n{:-^99}\n".format(message[i].text, code[i].text, "")
+    D2.append(D1)
+    D3="".join(D2)                                            # Assume the length of nessage[] and code[] are the same
+                                                        # Use join() to lump the formerly appended elements as one variable  
+return D3 
+ 
+#print(Myprotein())
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -375,7 +416,7 @@ def handle_message(event):
             TextSendMessage(text=content))
         return 0
     if event.message.text == "My Protein打幾折":
-        content = "很抱歉本項服務尚未建置完成，敬請選擇其他服務"
+        content = Myprotein()
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=content))
