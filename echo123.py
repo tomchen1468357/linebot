@@ -395,7 +395,7 @@ for i in range(len(message)):
     D2.append(D1)
     D3 = "".join(D2)                                            # Assume the length of nessage[] and code[] are the same
                                                         # Use join() to lump the formerly appended elements as one variable  
-return D3 
+    return D3 
  
 #print(Myprotein())
 
