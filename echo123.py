@@ -370,7 +370,7 @@ def get_web_page(url):
         return resp.text
  
 def Myprotein():
-D2= []
+D2 = []
 page = get_web_page("https://www.myprotein.tw/voucher-codes.list") 
  
 data_parse = BeautifulSoup(page, "html.parser") 
