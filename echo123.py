@@ -650,32 +650,32 @@ def handle_message(event):
     )
     line_bot_api.reply_message(event.reply_token, buttons_template)
 '''
-        buttons_template = TemplateSendMessage(
-            alt_text='開始玩 template',
-            template=ButtonsTemplate(
-                title='最值得信賴的自動化服務',
-                text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/s9egXSo.jpg',
-                actions=[
-                    MessageTemplateAction(
-                        label='台銀即時匯率',
-                        text='台銀即時匯率'
-                    ),
-                    URITemplateAction(
-                        label='Lativ特價查詢',
-                        uri='https://www.lativ.com.tw/'
-                    ),
-                    MessageTemplateAction(
-                        label='My Protein打幾折',
-                        text='My Protein打幾折'
-                    ),
-                    URITemplateAction(
-                        label='奇摩子電影',
-                        uri='https://tw.movies.yahoo.com/'
-                    )
-                ]
-            )
+    buttons_template = TemplateSendMessage(
+        alt_text='開始玩 template',
+        template=ButtonsTemplate(
+            title='最值得信賴的自動化服務',
+            text='請選擇',
+            thumbnail_image_url='https://i.imgur.com/s9egXSo.jpg',
+            actions=[
+                MessageTemplateAction(
+                    label='台銀即時匯率',
+                    text='台銀即時匯率'
+                ),
+                URITemplateAction(
+                    label='Lativ特價查詢',
+                    uri='https://www.lativ.com.tw/'
+                ),
+                MessageTemplateAction(
+                    label='My Protein打幾折',
+                    text='My Protein打幾折'
+                ),
+                URITemplateAction(
+                    label='奇摩子電影',
+                    uri='https://tw.movies.yahoo.com/'
+                )
+            ]
         )
+    )
         line_bot_api.reply_message(event.reply_token, buttons_template)
         return 0    
 
