@@ -650,7 +650,7 @@ def handle_message(event):
     )
     line_bot_api.reply_message(event.reply_token, buttons_template)
 '''
-    buttons_template = TemplateSendMessage(
+        buttons_template = TemplateSendMessage(
             alt_text='開始玩 template',
             template=ButtonsTemplate(
                 title='最值得信賴的自動化服務',
