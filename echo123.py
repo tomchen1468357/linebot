@@ -622,9 +622,10 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template)
         return 0
 '''
-'''    buttons_template = TemplateSendMessage(
-        alt_text='目錄 template',
-        template=ButtonsTemplate(
+
+    buttons_template = TemplateSendMessage(
+            alt_text='目錄 template',
+            template=ButtonsTemplate(
             title='歡迎進入查詢頁面:)',
             text='請選擇',
             thumbnail_image_url='https://i.imgur.com/w3qEWiH.png',
@@ -677,7 +678,7 @@ def handle_message(event):
         )
     )
     line_bot_api.reply_message(event.reply_token, buttons_template)
-        
+     '''   
 
 if __name__ == '__main__':
     app.run()
