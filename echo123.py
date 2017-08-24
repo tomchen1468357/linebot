@@ -622,7 +622,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template)
         return 0
 '''
-
+'''
     buttons_template = TemplateSendMessage(
             alt_text='目錄 template',
             template=ButtonsTemplate(
@@ -652,8 +652,8 @@ def handle_message(event):
     line_bot_api.reply_message(event.reply_token, buttons_template)
 '''
     buttons_template = TemplateSendMessage(
-        alt_text='開始玩 template',
-        template=ButtonsTemplate(
+            alt_text='開始玩 template',
+            template=ButtonsTemplate(
             title='最值得信賴的自動化服務',
             text='請選擇',
             thumbnail_image_url='https://i.imgur.com/s9egXSo.jpg',
@@ -677,8 +677,7 @@ def handle_message(event):
             ]
         )
     )
-    line_bot_api.reply_message(event.reply_token, buttons_template)
-     '''   
+    line_bot_api.reply_message(event.reply_token, buttons_template)   
 
 if __name__ == '__main__':
     app.run()
